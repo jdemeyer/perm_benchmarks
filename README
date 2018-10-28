@@ -1,0 +1,21 @@
+Steps
+
+1) Compile the Cython module
+
+ $ cythonize -a -i perm_cython.pyx 
+
+2) Compile the pythran version
+
+ $ pythran perm_pythran.py
+
+2) Run the descent countings in four different modes with
+
+ $ ./perm python 6
+ 1 57 302 302 57 1
+ $ ./perm cython_list 6
+ 1 57 302 302 57 1
+ $ ./perm cython_array 6
+ 1 57 302 302 57 1
+ $ ./perm pythran 6
+ 1 57 302 302 57 1
+
